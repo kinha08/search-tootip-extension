@@ -15,9 +15,13 @@ document.addEventListener("mouseup", ev => {
 
 
 document.addEventListener("mousedown", ev => {
-    let selection = window.getSelection();
-    if (selection.toString() !== "") {
-        selection.empty();
+    if (ev.button === 0) {
+        let selection = window.getSelection();
+        if (selection.toString() !== "") {
+            selection.empty();
+        }
+    } else {
+        removeTooltip();
     }
 })
 

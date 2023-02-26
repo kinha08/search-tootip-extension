@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Search Tooltip",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Show a tooltip to search a word or phrase on selection..",
     "browser_specific_settings": {
         "gecko": {
