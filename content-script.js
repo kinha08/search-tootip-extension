@@ -51,7 +51,13 @@ function createTooltip(top, left) {
     tooltipContainer.textContent = "Pesquisar";
 
     tooltipContainer.addEventListener("mousedown", () => {
-        browser.runtime.sendMessage({ search: window.getSelection().toString() })
+        console.log(browser);
+        if (typeof browser !== "undefined") {
+            browser.runtime.sendMessage({ search: window.getSelection().toString() })
+        }
+        if (typeof chrome !== "undefined") {
+            chrome.runtime.sendMessage({ search: window.getSelection().toString() })
+        }
         removeTooltip();
     })
 
